@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8" />
-    <title>Listing Quotations - baseball</title>
+    <title>Quotations</title>
     <!-- ① -->
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <script src="/js/jquery.js"></script>
@@ -10,15 +10,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>Listing Quotations</h1>
+    <h1>Quotations</h1>
     <table class="table">
         <thead>
         <tr>
             <th>ID</th>
-            <th>名前</th>
-            <th>年齢</th>
-            <th>チーム名</th>
-            <th>守備位置</th>
+            <th>名言</th>
             <th></th>
             <th></th>
             <th></th>
@@ -30,9 +27,6 @@
             <!-- ③ -->
             <td th:text="*{id}"></td>
             <td th:text="*{name}"></td>
-            <td th:text="*{age}"></td>
-            <td th:text="*{team}"></td>
-            <td th:text="*{position}"></td>
             <!-- ④ -->
             <td><a class="btn btn-default btn-xs" th:href="@{/quotations/{id}(id=*{id})}">参照</a></td>
             <td><a class="btn btn-default btn-xs" th:href="@{/quotations/{id}/edit(id=*{id})}">編集</a></td>
