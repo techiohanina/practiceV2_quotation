@@ -1,0 +1,10 @@
+INSERT INTO quotation(id,name) VALUES('1','ユーザーに焦点を絞れば、他のものはみな後からついてくる。');
+INSERT INTO quotation(id,name) VALUES('2','1 つのことをとことん極めてうまくやるのが一番。');
+INSERT INTO quotation(id,name) VALUES('3','遅いより速いほうがいい。');
+INSERT INTO quotation(id,name) VALUES('4','ウェブ上の民主主義は機能する。');
+INSERT INTO quotation(id,name) VALUES('5','情報を探したくなるのはパソコンの前にいるときだけではない。');
+INSERT INTO quotation(id,name) VALUES('6','悪事を働かなくてもお金は稼げる。');
+INSERT INTO quotation(id,name) VALUES('7','世の中にはまだまだ情報があふれている。');
+INSERT INTO quotation(id,name) VALUES('8','情報のニーズはすべての国境を越える。');
+INSERT INTO quotation(id,name) VALUES('9','スーツがなくても真剣に仕事はできる。');
+INSERT INTO quotation(id,name) VALUES('10','「すばらしい」では足りない。');
