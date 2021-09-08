@@ -2,11 +2,11 @@ package com.example.practiceV2.domain;
 
 import javax.persistence.*;
 
-@Entity // ①
+@Entity
 @Table(name = "quotation")
 public class Quotation {
-    @Id // ②
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // ③
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
 
