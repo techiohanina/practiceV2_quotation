@@ -1,11 +1,9 @@
 package com.example.practiceV2.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity // ①
+@Table(name = "quotation")
 public class Quotation {
     @Id // ②
     @GeneratedValue(strategy = GenerationType.IDENTITY) // ③

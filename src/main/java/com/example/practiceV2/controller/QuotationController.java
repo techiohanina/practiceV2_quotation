@@ -1,22 +1,18 @@
 package com.example.practiceV2.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.practiceV2.domain.Quotation;
 import com.example.practiceV2.service.QuotationService;
 
 @Controller
+//@RestController
 @RequestMapping("/quotations") // ①
 public class QuotationController {
     @Autowired
@@ -34,6 +30,7 @@ public class QuotationController {
         return "quotations/new";
     }
 
+
     @GetMapping("{id}/edit")
     public String edit(@PathVariable Long id, Model model) { // ⑤
         Quotation quotation = quotationService.findOne(id);
@@ -47,6 +44,14 @@ public class QuotationController {
         model.addAttribute("quotation", quotation);
         return "quotations/show";
     }
+
+    /*randomなレコードを表示
+    @GetMapping("random")
+    public String random(Model model) {
+        Quotation quotation = quotationService.findOne(id);
+        model.addAttribute("quotation", quotation);
+        return "quotations/show";
+*/
 
     @PostMapping
     public String create(@ModelAttribute Quotation quotation) { // ⑥
